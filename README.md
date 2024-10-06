@@ -8,10 +8,11 @@ Connecting to an instance allows an access to a server in the cloud, allowing ad
 EC2 supports different methods for connecting to instances using SSH, including direct connections using an SSH client or browser-based SSH connections using EC2 Instance Connect. SSH is widely used for securely connecting to remote servers, particularly Linux-based systems. Additionally, every connection attempt via SSH is logged, making it easier to audit and track who accessed the instance. This is especially important in environments with multiple users and instances.
 
 ### What is Key-pair?
-A **key pair** is a set of two cryptographic keys—a **public key** and a **private key**—that work together to secure access to your Amazon EC2 instance. It consists of:
+A **key pair** is a set of two cryptographic keys—a **public key** and a **private key**—that work together to secure access to your Amazon EC2 instance.
 
 ![keypair](https://github.com/user-attachments/assets/085613dc-ceab-451e-a9ca-9098cb4d2bbf)
 
+ It consists of:
 
 **Public Key** - stored on the EC2 instance and can be shared publicly
 
@@ -19,29 +20,26 @@ A **key pair** is a set of two cryptographic keys—a **public key** and a **pri
 
 These two keys work together to encrypt and decrypt data, enabling secure, password-free access to servers.
 
-
-
-### SSH and Key-Pair: Relationship? HAHAHA
+### SSH and Key-Pair
 SSH (Secure Shell) uses public-key cryptography, a method of encryption that relies on two mathematically linked keys, known as a key pair: a public key (shareable) and a private key (secret). In SSH, two separate key pairs are involved—user key pair (client) and host key pair (server)—each with its own public and private key. This dual setup enhances mutual authentication and ensures a secure SSH connection between the client and server.
 
-How the Key Pairs Work in SSH
-User Key Pair (Client-Side Authentication):
+### How the Key Pairs Work in SSH
+- **User (Client-Side Authentication) Key Pair:**
+    - **Private Key:** Stored securely on the user's local machine. It is never transmitted or shared and is used to authenticate the user by digitally signing requests during the SSH handshake.
+    - **Public Key:** Shared with the server to allow authentication. It is used by the server to validate the user’s private key during authentication.
+      
+- **Host (Server-Side Authentication) Key Pair:**
+    - **Private Key:** Stored securely on the server. It is used to decrypt encrypted communications and is never exposed to the client.
+    - **Public Key:** Provided to users when they first connect to the server. SSH clients store this public key and use it to verify the server’s identity in future sessions.
 
-Private Key: Held securely by the user on their local machine and never shared. This key is used to prove the user’s identity.
-Public Key: Placed on the SSH server in the ~/.ssh/authorized_keys file, allowing the server to recognize and trust the client.
-Host Key Pair (Server-Side Authentication):
+### Key Pair Security Benefits in SSH
+- **No Passwords in Transit:** Only the public keys are shared, protecting against interception.
+- **Enhanced Trust:** Users know they’re connecting to the right server, and servers know they’re connecting to authorized clients.
+- **Encryption and Authentication:** SSH uses the key pairs to encrypt the session and verify both sides, ensuring privacy and security.
 
-Private Key: Generated and stored securely on the SSH server. Users generally don’t interact with this key directly.
-Public Key: Provided to users when they first connect to the server. SSH clients store this public key and use it to verify the server’s identity in future sessions.
-How the Key Pairs Work Together in SSH Authentication
-Mutual Authentication: Both the server and client verify each other’s identity through these key pairs. When the client connects, it authenticates using the server's public key (stored locally after the first connection) and its own private key. The server verifies the client’s public key against its authorized_keys file.
 
-Secure Connection: If both verifications pass, the connection is established securely, and data exchanged over SSH is encrypted.
 
-Key Pair Security Benefits in SSH
-No Passwords in Transit: Only the public keys are shared, protecting against interception.
-Enhanced Trust: Users know they’re connecting to the right server, and servers know they’re connecting to authorized clients.
-Encryption and Authentication: SSH uses the key pairs to encrypt the session and verify both sides, ensuring privacy and security.
+
 
 ## 4 Method of Connecting to an Instance
 There are 4 ways of connecting to an instance. Amazon EC2 offers various methods for connecting to instances depending on the operating system of the instance and the user's needs. Each of these ways has distinct use cases, security mechanisms, and platform compatibility.
