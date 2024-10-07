@@ -1,4 +1,4 @@
-# All About Connecting to an Instance (Work In Progress pa po)
+# All About Connecting to an Instance
 An **EC2 instance** is a virtual server in Amazon's Elastic Compute Cloud (EC2) that provides scalable compute capacity. It allows users to run applications, host websites, or perform any kind of computation in the cloud without the need for physical hardware. The instance operates much like a physical computer, but it's managed and provisioned from the AWS platform. EC2 instances come with different configurations of CPU, memory, storage, and networking capacity, making them customizable for various workloads.
 
 ![image](https://github.com/user-attachments/assets/72381336-0487-4e50-bd12-56a605ac14c3)
