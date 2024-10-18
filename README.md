@@ -1,7 +1,7 @@
 # All About Connecting to an Instance
 An **EC2 instance** is a virtual server in Amazon's Elastic Compute Cloud (EC2) that provides scalable compute capacity. It allows users to run applications, host websites, or perform any kind of computation in the cloud without the need for physical hardware. The instance operates much like a physical computer, but it's managed and provisioned from the AWS platform. EC2 instances come with different configurations of CPU, memory, storage, and networking capacity, making them customizable for various workloads.
 
-![image](https://github.com/user-attachments/assets/72381336-0487-4e50-bd12-56a605ac14c3)
+![ACI](https://github.com/user-attachments/assets/cae15da5-0fc8-4710-aaa1-83ca0d5461ce)
 
 ### Why do we connect to an instance?
 Connecting to an instance allows an access to a server in the cloud, allowing administrators and developers to manage, configure, and maintain the infrastructure remotely. By connecting, we can install and update software, troubleshoot issues, and monitor performance. It ensures that cloud-hosted services are secure and functions efficiently.
@@ -12,7 +12,7 @@ EC2 supports different methods for connecting to instances using SSH, including 
 ### What is Key-pair?
 A **key pair** is a set of two cryptographic keys—a **public key** and a **private key**—that work together to secure access to your Amazon EC2 instance.
 
-![keypair](https://github.com/user-attachments/assets/085613dc-ceab-451e-a9ca-9098cb4d2bbf)
+![ACI1](https://github.com/user-attachments/assets/9bb15512-8f3c-48ee-b5cd-ea221752c33c)
 
  It consists of:
 
@@ -56,12 +56,12 @@ There are 4 ways of connecting to an instance. Amazon EC2 offers various methods
 
 In this workshop, let us discuss the first three ways to connect to an instance.
 
-![kio](https://github.com/user-attachments/assets/a623691a-7dc7-428b-9572-a473989a462c)
+![ACI2](https://github.com/user-attachments/assets/d48b14b8-c957-4665-8974-7627bb308320)
 
 ## Method 1: EC2 Instance Connect
 Connecting via **EC2 Instance Connect** is a feature that enables a secure connection to your Linux instances over SSH. EC2 Instance Connect allows you to connect to your instance directly through your browser. It refers to the feature in Amazon Web Services (AWS) that enables users to connect to their EC2 instances using SSH through the AWS Management Console, without the need for a standalone SSH client. It allows you to use AWS Identity and Access Management (IAM) policies and users to control SSH access without needing to share or manage SSH keys. 
 
-![ec2-instance-connect-endpoint drawio-1](https://github.com/user-attachments/assets/1ce280df-e62c-4905-9246-1dd0e492d898)
+![ACI3](https://github.com/user-attachments/assets/5d10668a-1d0b-4224-ad66-15809d10c003)
 
 **Prerequisites for installing and using EC2 Instance Connect:**
 
