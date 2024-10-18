@@ -87,6 +87,8 @@ Connecting via **EC2 Instance Connect** is a feature that enables a secure conne
 ## Method 2: SSH Client
 Connecting to an instance through **SSH Client** involves using encryption and key-pair authentication when connectung to EC2 Linux instances. This method enables us to associate with **key pair**.
 
+![ACI4](https://github.com/user-attachments/assets/3a96205e-c757-447f-8668-24887320cb3c)
+
 **Prerequisites for Connecting EC2 Instance Using SSH**
 
 1. **SSH Key (.pem file)**: A private key used for authenticating your identity when connecting to the EC2 instance.
@@ -103,6 +105,9 @@ Connecting to an instance through **SSH Client** involves using encryption and k
 
 ## Method 3: Remote Desktop Protocol (RDP)
 **Remote Desktop Protocol (RDP)** enables multiple users to connect to a window instances. Users can have separate sessions on the same server, allowing them to run different applications, access different files, and have their own desktop environments without interfering with each other’s work.
+
+![ACI5](https://github.com/user-attachments/assets/cb20efaf-04d7-45a7-b7bd-9a20e49e9b8c)
+
 
 **Prerequisite for Connecting Instance using RDP**
 
